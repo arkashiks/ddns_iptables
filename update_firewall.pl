@@ -1,5 +1,5 @@
 #!/usr/bin/perl -w
-
+ 
 use strict;
 use warnings;
  
@@ -53,8 +53,9 @@ for my $vIPName (sort (keys %vIPNames)) {
  
 # reload iptables
 if ($vReload eq "yes") {
-    print "\n", strftime("%F %T", localtime) , " Dynamic IPs changed, reloading tptables. Script completed.\n";
+    print "\n", strftime("%F %T", localtime) , " Changes detected, reloading iptables.";
     system "/sbin/service iptables reload" ;
+	print "\n", strftime("%F %T", localtime) , " Script completed.\n";
 } else {
-	print "\n", strftime("%F %T", localtime) , " No dynamic IPs changed. Script completed.\n";
+	print "\n", strftime("%F %T", localtime) , " No changes detected. Script completed.\n";
 }
