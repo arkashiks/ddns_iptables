@@ -14,6 +14,7 @@ Installation is pretty simple:
 
 Example of iptables rules below (only ones with FQDNs in source are in scope of script):
 
+```
 *filter
 :INPUT DROP [0:0]
 :FORWARD DROP [0:0]
@@ -30,3 +31,6 @@ Example of iptables rules below (only ones with FQDNs in source are in scope of 
 -A INPUT -p tcp -m state --state NEW -m tcp --dport 443 -j ACCEPT
 -A INPUT -s myjumphost.mydomian.com -j ACCEPT
 COMMIT
+```
+
+In case of this example, there is only one dynamic host which is myjumphost.mydomian.com. Each time script will run, it will try to resolve this FQDN and then check if resolved IP is in iptables policy, if not - then it will trigger reload of iptables service and as result new IP will be in the policy.
