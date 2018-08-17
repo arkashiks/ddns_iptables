@@ -8,7 +8,7 @@ use Socket;
 
 print "\n", strftime("%F %T", localtime) , " Firewall update script started.";
 
-my $vReload = "no"; # restart only once
+my $vReload = "no"; # restart only once during execution
  
 # create a name/address hash from all ip names in /etc/sysconfig/iptables
 open (IPTABLES, '/etc/sysconfig/iptables')
