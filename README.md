@@ -1,5 +1,5 @@
 # ddns_iptables
-Script which allows use of iptables in conjunction with Dynamic DNS services. Uses Perl to perform verifications and reload iptables service if changes detected.
+Script which allows use of iptables in combination with Dynamic DNS services. Uses Perl to perform verifications and reload iptables service if changes detected.
 
 Original script was written by Thomas Gutzmann and can be found here https://wiki.gutzmann.com/confluence/display/HowTo/IPTables+Firewall+Setup+for+Dynamic+DNS.
 
